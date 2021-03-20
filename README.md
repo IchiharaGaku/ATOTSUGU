@@ -1,5 +1,10 @@
 # ATOTSUGU
 
+# Docker環境構築
+- rootディレクトリで　cd db
+- dbフォルダにて　`docker-compose -f "docker-compose.yml" up -d`
+
+
 ## ドキュメント
 - Miro https://miro.com/app/board/o9J_koADcTc=/
 - Figma https://www.figma.com/file/MJdVbl77IqTm1p4eHkrxlk/ATOTSUGU?node-id=0%3A1
