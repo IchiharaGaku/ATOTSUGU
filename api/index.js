@@ -13,8 +13,8 @@ const test = require('./routes/test')
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '設定したパスワード',
-  database: 'list_app'
+  password: 'root',
+  database: 'atotsugu'
 });
 
 connection.connect((err) => {
