@@ -61,4 +61,9 @@ yarn install # or npm install
 - [VueJS license](https://github.com/vuejs/vue/blob/master/LICENSE)
 
 
+## 参考
+- GraphQL, nuxt のセットアップ
+https://takumon.com/nuxt-apollo-with-graphpack
 
+- nuxt フロントのセットアップ
+https://www.to-r.net/media/nuxt-setup/
