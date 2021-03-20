@@ -26,6 +26,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'ress'
   ],
 
   /*
@@ -56,6 +57,7 @@ export default {
     // Doc: https://http.nuxtjs.org
     '@nuxt/http',
     '@nuxtjs/apollo',
+    '@nuxtjs/style-resources',
   ],
 
   apollo: {
@@ -68,6 +70,12 @@ export default {
         websocketsOnly: true, 
       }
     }
+  },
+  styleResources: {
+    scss: [
+      '@/assets/scss/foundation/_mixins.scss',
+      '@/assets/scss/foundation/_variables.scss',
+    ]
   },
   /*
   ** Server Middleware
