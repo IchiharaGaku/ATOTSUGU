@@ -3,6 +3,8 @@
 # Docker環境構築
 - rootディレクトリで　cd db
 - dbフォルダにて　`docker-compose -f "docker-compose.yml" up -d`
+- docker exec -it db_atotsugu_1 bash
+- mysql -uroot -p root
 
 
 ## ドキュメント
