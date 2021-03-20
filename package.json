@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxt/http": "latest",
     "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/style-resources": "latest",
     "express": "latest",
     "nuxt": "latest"
   },
