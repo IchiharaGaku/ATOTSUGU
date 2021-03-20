@@ -18,6 +18,9 @@
     "graphpack": "^1.0.6"
   },
   "dependencies": {
-    "validator": "^10.11.0"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
+    "validator": "^10.11.0",
+    "winston": "^3.3.3"
   }
 }
