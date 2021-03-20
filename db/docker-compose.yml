@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  atotsugu:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: atotsugu
+      MYSQL_USER: atotsugu
+      MYSQL_PASSWORD: atotsugu
+    restart: always
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - ./conf/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 13308:3308
