@@ -1,11 +1,29 @@
 const express = require('express')
+const mysql = require('mysql');
+
 
 // Create express instance
 const app = express()
 
+
 // Require API routes
 const users = require('./routes/users')
 const test = require('./routes/test')
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'atotsugu'
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.log('error connecting: ' + err.stack);
+    return;
+  }
+  console.log('success');
+});
 
 // Import API Routes
 app.use(users)
