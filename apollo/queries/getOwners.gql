@@ -1,0 +1,13 @@
+query GetOWners {
+  owners {
+    id
+    age
+    gender
+    self_introduce
+    business_type
+    business_name
+    assumed_salary
+    email
+    password
+  }
+}

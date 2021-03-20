@@ -35,31 +35,49 @@
         </a>
       </div>
     </div>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>メール</th>
+        <th>年齢</th>
+      </tr>
+      <tr v-for="item in users" :key="item.id">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.age }}</td>
+      </tr>
+    </table>
+    <!-- <div>{{owners}}</div> -->
   </div>
 </template>
 
 <script>
 import getUsersGql from '~/apollo/queries/getUsers.gql'
+import getOwnersGql from '~/apollo/queries/getOwners.gql'
 
 export default {
-  
   async asyncData ({ $http }) {
     const test = await $http.$get('/api/test')
     return {
       test
     }
-  }, 
-  data() {
+  },
+  data () {
     return {
-      users: []
+      users: [],
+      owners: []
     }
   },
   apollo: {
     users: {
       query: getUsersGql
+    },
+    owners: {
+      query: getOwnersGql
     }
   }
-  
 }
 </script>
 
