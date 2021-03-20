@@ -39,13 +39,27 @@
 </template>
 
 <script>
+import getUsersGql from '~/apollo/queries/getUsers.gql'
+
 export default {
+  
   async asyncData ({ $http }) {
     const test = await $http.$get('/api/test')
     return {
       test
     }
+  }, 
+  data() {
+    return {
+      users: []
+    }
+  },
+  apollo: {
+    users: {
+      query: getUsersGql
+    }
   }
+  
 }
 </script>
 

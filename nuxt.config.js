@@ -54,9 +54,21 @@ export default {
   */
   modules: [
     // Doc: https://http.nuxtjs.org
-    '@nuxt/http'
+    '@nuxt/http',
+    '@nuxtjs/apollo',
   ],
 
+  apollo: {
+    clientConfigs: {
+      default: {
+        // Graphpack側のエンドポイントを指定します。
+        httpEndpoint: 'http://localhost:4000/graphql',
+        // Subscription用にWebSocketの設定も追加します。
+        wsEndpoint: 'ws://localhost:4000/graphql',
+        websocketsOnly: true, 
+      }
+    }
+  },
   /*
   ** Server Middleware
   */
