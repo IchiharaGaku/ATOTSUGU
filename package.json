@@ -20,6 +20,7 @@
     "nuxt": "latest"
   },
   "devDependencies": {
+    "@mdi/js": "^5.9.55",
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/vuetify": "^1.11.3",
     "node-sass": "^5.0.0",

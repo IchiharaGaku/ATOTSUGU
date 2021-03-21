@@ -1,18 +1,28 @@
 <template>
-  <div>
-    <TheHeader />
-    <Nuxt />
-    <TheFooter />
+  <div id="app">
+    <LpHeader class="header"></LpHeader>
+    <Nuxt class="main" />
   </div>
 </template>
 
-<script>
-export default {
-  
+<style lang="scss">
+
+
+#app {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: $base_background_color;
+    display: grid;
+    grid-template:
+    "header" 64px
+    "main"   auto
+    /* "footer" 20px */
+    /100%;
+
+
+
 }
-</script>
 
-
-<style lang="scss" scoped>
 
 </style>
