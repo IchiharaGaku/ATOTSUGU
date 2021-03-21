@@ -52,7 +52,7 @@
 
       &-title {
         width: 300px;
-        height: 40px;
+        height: 47px;
         align-items: center;
       }
 
@@ -66,6 +66,7 @@
 
           > li {
             border: 1px solid #000000;
+            border-radius: 3px;
             font-size: $font-18;
             margin: 0 15px 0;
               // flex: 1;

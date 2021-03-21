@@ -57,6 +57,7 @@ export default {
     '@nuxt/http',
     '@nuxtjs/apollo',
     '@nuxtjs/style-resources',
+    'bootstrap-vue/nuxt',
   ],
 
   apollo: {
