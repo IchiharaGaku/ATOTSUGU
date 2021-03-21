@@ -1,40 +1,27 @@
 'use strict'
-const mysql = require('mysql');
-const logger = './util/logger.js';
+const db = require('./util/mysql');
+const logger = require('./util/logger.js');
+const business = require('./services/businesses.js')
 
 export let owners = ownersInfo()
 
 async function ownersInfo() {
-  const sql = 'SELECT * FROM owners';
-  const res = await query(sql);
+  logger.info('query/owners');
+  const sql = `SELECT * FROM owners`;
+  const res = await db.query(sql);
   return res
 }
 
-async function query(sql, param, isSingle, nestTables) {
-  const options = { sql: sql, nestTables: nestTables || false };
-  return new Promise((resolve, reject) => {
-    const params = {
-      host: process.env.DATABASE_HOST || 'localhost',
-      user: process.env.DATABASE_USER || 'root',
-      password: process.env.DATABASE_PASSWORD || 'root',
-      port: process.env.DATABASE_PORT || '8889',
-      database: process.env.DATABASE_NAME || 'atotsugu'
-    };
-    const pool = mysql.createConnection(params);
-    pool.query(options, param, (error, results) => {
-      if (error) {
-        logger.error(error);
-        reject(error);
-      }
-      if (isSingle) {
-        resolve(results ? results[0] : null);
-      } else {
-        resolve(results);
-      }
-    });
-  });
-};
+export let businesses = allBusinesses()
 
+async function allBusinesses() {
+  logger.info('query/businesses');
+  const sql = `SELECT * FROM business`
+  const businesses = await db.query(sql)
+
+  await business.buildBusinesses(businesses)
+  return businesses
+}
 
 export let users = [
   {

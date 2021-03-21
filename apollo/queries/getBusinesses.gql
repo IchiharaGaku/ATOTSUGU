@@ -1,0 +1,15 @@
+query GetBusinesses {
+  businesses {
+    id
+    owner_id
+    contents_what
+    contents_why
+    contents_how
+    contents_will
+    address
+    number_of_employees
+    facebook
+    business_type
+    business_name
+  }
+}

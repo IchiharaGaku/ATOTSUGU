@@ -35,36 +35,73 @@
         </a>
       </div>
     </div>
-    <table>
-      <tr>
-        <th>ID</th>
-        <th>年齢</th>
-        <th>性別</th>
-        <th>自己紹介</th>
-        <th>業種</th>
-        <th>事業名</th>
-        <th>想定年商</th>
-        <th>メール</th>
-        <th>パスワード</th>
-      </tr>
-      <tr v-for="item in owners" :key="item.id">
-        <td>{{ item.id }}</td>
-        <td>{{ item.age }}</td>
-        <td>{{ item.gender }}</td>
-        <td>{{ item.self_introduce }}</td>
-        <td>{{ item.business_type }}</td>
-        <td>{{ item.business_name }}</td>
-        <td>{{ item.assumed_salalry }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.password }}</td>
-      </tr>
-    </table>
+    <br>
+    <h2>自営業者</h2>
+    <div>
+      <table class="self-employee">
+        <tr>
+          <th>ID</th>
+          <th>年齢</th>
+          <th>性別</th>
+          <th>自己紹介</th>
+          <th>業種</th>
+          <th>事業名</th>
+          <th>想定年商</th>
+          <th>メール</th>
+          <th>パスワード</th>
+        </tr>
+        <tr v-for="item in owners" :key="item.id">
+          <td>{{ item.id }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.gender }}</td>
+          <td>{{ item.self_introduce }}</td>
+          <td>{{ item.business_type }}</td>
+          <td>{{ item.business_name }}</td>
+          <td>{{ item.assumed_salalry }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.password }}</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <h2>事業内容</h2>
+    <div>
+      <table class="self-employee">
+        <tr>
+          <th>ID</th>
+          <th>個人事業主ID</th>
+          <th>何をやっているのか</th>
+          <th>何故やっているのか</th>
+          <th>どうやっているのか</th>
+          <th>ビジョン</th>
+          <th>住所</th>
+          <th>従業員数</th>
+          <th>Facebook</th>
+          <th>業種</th>
+          <th>事業名</th>
+        </tr>
+        <tr v-for="item in businesses" :key="item.id">
+          <td>{{ item.id }}</td>
+          <td>{{ item.owner_id }}</td>
+          <td>{{ item.contents_what }}</td>
+          <td>{{ item.contents_why }}</td>
+          <td>{{ item.contents_how }}</td>
+          <td>{{ item.contents_will }}</td>
+          <td>{{ item.address }}</td>
+          <td>{{ item.number_of_employees }}</td>
+          <td>{{ item.facebook }}</td>
+          <td>{{ item.business_type }}</td>
+          <td>{{ item.business_name }}</td>
+        </tr>
+      </table>
+    </div>
   </div>
 </template>
 
 <script>
 import getUsersGql from '~/apollo/queries/getUsers.gql'
 import getOwnersGql from '~/apollo/queries/getOwners.gql'
+import getBusinessesGql from '~/apollo/queries/getBusinesses.gql'
 
 export default {
   async asyncData ({ $http }) {
@@ -85,6 +122,9 @@ export default {
     },
     owners: {
       query: getOwnersGql
+    },
+    businesses: {
+      query: getBusinessesGql
     }
   }
 }
@@ -94,9 +134,6 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -124,6 +161,11 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+}
+
+.self-employee {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .links {

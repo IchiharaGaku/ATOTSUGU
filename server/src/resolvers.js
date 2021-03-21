@@ -1,5 +1,5 @@
 import { PubSub } from 'apollo-server';
-import { users, generateId, owners } from './db';
+import { users, generateId, owners, businesses } from './db';
 const pubsub = new PubSub();
 
 const EVENT = {
@@ -13,6 +13,7 @@ const resolvers = {
     user: (parent, { id }, context, info) => users.find(user => user.id == id),
     users: (parent, args, context, info) => users,
     owners: (parent, args, context, info) => owners,
+    businesses: (parent, args, context, info) => businesses,
     hello: () => 'world!',
   },
   Mutation: {
