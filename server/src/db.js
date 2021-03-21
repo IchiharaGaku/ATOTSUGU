@@ -1,5 +1,4 @@
 'use strict'
-// const db = './util/mysql.js';
 const mysql = require('mysql');
 const logger = './util/logger.js';
 
@@ -10,8 +9,6 @@ async function ownersInfo() {
   const res = await query(sql);
   return res
 }
-
-
 
 async function query(sql, param, isSingle, nestTables) {
   const options = { sql: sql, nestTables: nestTables || false };

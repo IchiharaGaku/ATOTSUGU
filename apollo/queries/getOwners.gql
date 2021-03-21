@@ -1,4 +1,4 @@
-query GetOWners {
+query GetOwners {
   owners {
     id
     age
@@ -6,7 +6,7 @@ query GetOWners {
     self_introduce
     business_type
     business_name
-    assumed_salary
+    assumed_salalry
     email
     password
   }

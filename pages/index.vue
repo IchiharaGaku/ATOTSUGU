@@ -38,18 +38,27 @@
     <table>
       <tr>
         <th>ID</th>
-        <th>名前</th>
-        <th>メール</th>
         <th>年齢</th>
+        <th>性別</th>
+        <th>自己紹介</th>
+        <th>業種</th>
+        <th>事業名</th>
+        <th>想定年商</th>
+        <th>メール</th>
+        <th>パスワード</th>
       </tr>
-      <tr v-for="item in users" :key="item.id">
+      <tr v-for="item in owners" :key="item.id">
         <td>{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.email }}</td>
         <td>{{ item.age }}</td>
+        <td>{{ item.gender }}</td>
+        <td>{{ item.self_introduce }}</td>
+        <td>{{ item.business_type }}</td>
+        <td>{{ item.business_name }}</td>
+        <td>{{ item.assumed_salalry }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.password }}</td>
       </tr>
     </table>
-    <!-- <div>{{owners}}</div> -->
   </div>
 </template>
 
