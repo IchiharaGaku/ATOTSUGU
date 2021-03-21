@@ -6,7 +6,7 @@
       max-height="400"
       v-for="business in businesses"
       :key="business"
-      to="business/show"
+      to="business/:id"
     >
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -35,11 +35,13 @@ export default {
   layout: 'afterLogin',
   data () {
       return {
-        businesses: [1,2,3]
+        businesses: [{id: 1}, {id: 2}, {id: 3}]
       }
     },
   methods: {
-
+    toBusinessShow() {
+      
+    }
   },
 }
 </script>
