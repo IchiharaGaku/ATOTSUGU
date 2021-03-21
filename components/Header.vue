@@ -12,10 +12,21 @@
               <nav class="nav">
                 <ul>
                   <li>
-                    <NuxtLink to="/register" class="link">新規登録</NuxtLink>
+                    <NuxtLink to="/top" class="link">事業一覧</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/login" class="link">ログイン</NuxtLink>
+                    <NuxtLink to="/chat" class="link">チャット一覧</NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink to="" class="link">事業を投稿</NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink to="business/show" class="link">My事業</NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink to="/user/_id" class="link">
+                      <v-icon>mdi-account-circle</v-icon>
+                    </NuxtLink>
                   </li>
                 </ul>
               </nav>
@@ -65,8 +76,8 @@
           
 
           > li {
-            border: 1px solid #000000;
-            border-radius: 3px;
+            // border: 1px solid #000000;
+            // border-radius: 3px;
             font-size: $font-18;
             margin: 0 15px 0;
               // flex: 1;

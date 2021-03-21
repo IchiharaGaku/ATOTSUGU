@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  
+  layout: 'beforeLogin',
 }
 </script>
 
