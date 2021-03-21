@@ -1,7 +1,6 @@
 <template>
-  <div>
-    
-  </div>
+  <Header></Header>
+  
 </template>
 
 <script>
@@ -12,5 +11,8 @@ export default {
 
 
 <style lang="scss" scoped>
+  .login {
+    text-align: center;
+  }
 
 </style>
