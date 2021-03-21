@@ -18,6 +18,7 @@
     "graphpack": "^1.0.6"
   },
   "dependencies": {
-    "validator": "^10.11.0"
+    "validator": "^10.11.0",
+    "winston": "^3.3.3"
   }
 }

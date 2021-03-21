@@ -1,6 +1,7 @@
 type Query {
   users: [User!]!
   owners: [Owner!]!
+  businesses: [Business!]
   user(id: ID!): User!
   hello: String
 }
@@ -14,6 +15,7 @@ type User {
 
 type Owner {
   id: Int!
+  business_id: Int!
   age: Int
   gender: Int
   self_introduce: String
@@ -22,6 +24,20 @@ type Owner {
   assumed_salalry: Int
   email: String
   password: String
+}
+
+type Business {
+  id: Int!
+  owner_id: Int!
+  contents_what: String!
+  contents_why: String!
+  contents_how: String!
+  contents_will: String
+  address: String!
+  number_of_employees: Int
+  facebook: String
+  business_type: String
+  business_name: String
 }
 
 type Mutation {
