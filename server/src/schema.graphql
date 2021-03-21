@@ -1,5 +1,6 @@
 type Query {
   users: [User!]!
+  owners: [Owner!]!
   user(id: ID!): User!
   hello: String
 }
@@ -9,6 +10,18 @@ type User {
   name: String!
   email: String!
   age: Int
+}
+
+type Owner {
+  id: Int!
+  age: Int
+  gender: Int
+  self_introduce: String
+  business_type: String
+  business_name: String
+  assumed_salalry: Int
+  email: String
+  password: String
 }
 
 type Mutation {
