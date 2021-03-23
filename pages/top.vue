@@ -24,7 +24,7 @@
         <v-spacer></v-spacer>
 
       <v-card-text class="v-card-text">
-        I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+        災害を予防し、自然のをバランスを守り、資源を活かす。木の伐採・運搬、管理、雨の日の多い夏の期間は丹波山村の公園の清掃など
       </v-card-text>
     </v-card>
   </div>
