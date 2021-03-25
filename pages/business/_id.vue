@@ -9,34 +9,36 @@
         height="200px"
         src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
       >
-        <v-card-title></v-card-title>
+        <v-card-title>{{ business.title }}</v-card-title>
       </v-img>
+      <h3>
+        <v-icon>mdi-account-circle</v-icon>
+        廣瀬大輝
+      </h3>
 
-      <v-card-subtitle class="pb-0">
-        Number 10
-      </v-card-subtitle>
 
-      <v-card-text class="text--primary">
-        <div>Whitehaven Beach</div>
+      <h2>
+        なにをやっているか
+      </h2>
+        {{ business.contents_what}}
+      <h2>
+        なぜやっているか
+      </h2>
+        {{ business.contents_why}}
+      <h2>
+        どうやっているか
+      </h2>
+        {{ business.contents_how}}
+      <h2>
+        こんなことやります
+      </h2>
+        {{ business.contents_will}}
+      <h2>
+        住所
+      </h2>
+        {{ business.address }}
 
-        <div>Whitsunday Island, Whitsunday Islands</div>
-      </v-card-text>
-
-      <v-card-actions>
-        <v-btn
-          color="orange"
-          text
-        >
-          Share
-        </v-btn>
-
-        <v-btn
-          color="orange"
-          text
-        >
-          Explore
-        </v-btn>
-      </v-card-actions>
+      
     </v-card>
   </div>
 </template>
@@ -46,7 +48,16 @@ export default {
   layout: 'afterLogin',
   data() {
     return {
-      business: {title: 'Top 10 Australian beaches', },
+      business: 
+      {
+        title: 'Top 10 Australian beaches',
+        contents_what: '〜〜〜〜〜これをやりましょう',
+        contents_why: '〜〜〜だからやりましょう',
+        contents_how: '~~~~こうやってやりましょう',
+        contents_will: '~~~~~~~これをやってほしいです',
+        address: '神奈川県横浜市'
+
+      },
     }
   },
 
