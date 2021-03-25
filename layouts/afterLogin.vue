@@ -1,8 +1,12 @@
 <template>
-  <div id="app">
-    <Header class="header"></Header>
-    <Nuxt class="main" />
-  </div>
+    <v-app id="app">
+      <v-app-var>
+        <Header class="header"></Header>
+      </v-app-var>
+      <v-main>
+        <Nuxt class="main" />
+      </v-main>
+    </v-app>
 </template>
 
 <style lang="scss">

@@ -1,5 +1,6 @@
 'use strict'
 const mysql = require('mysql');
+const logger = require('./logger');
 
 module.exports = {
   query: query
